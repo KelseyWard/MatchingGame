@@ -1,0 +1,95 @@
+2<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inGameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/holtwood_one_sc"
+        android:text="@string/app_name"
+        android:textSize="35sp"
+        android:paddingTop="15dp">
+
+    </TextView>
+
+    <GridLayout
+        android:id="@+id/card_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="100dp"
+        android:columnCount="4"
+        android:rowCount="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/cardOne"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardTwo"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardThree"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardFour"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardFive"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardSix"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardSeven"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardEight"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardNine"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardTen"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardEleven"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardTwelve"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardThirteen"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardFourteen"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardFifteen"
+            style="@style/backOfCard" />
+        <Button
+            android:id="@+id/cardSixteen"
+            style="@style/backOfCard" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/new_game_button"
+        style="@style/GameOptionButton"
+        android:layout_marginTop="20dp"
+        android:text="@string/new_game"
+        app:layout_constraintTop_toBottomOf="@id/card_format" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
