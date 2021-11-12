@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Matching Game</string>
-    <string name="new_game">New Game</string>
-    <string name="congrats">Congratulations!</string>
-    <string name="title_game">Game</string>
-    <string name="help_game">Help</string>
-    <string name="help_instructions">Match each card to pair.</string>
-</resources>
