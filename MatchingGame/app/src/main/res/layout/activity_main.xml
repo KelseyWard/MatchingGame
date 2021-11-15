@@ -37,86 +37,70 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="30dp">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardOne"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck" />
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardTwo"
-            style="@style/backOfCard"
             tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            style="@style/backOfCard"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardThree"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardFour"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardFive"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardSix"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardSeven"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardEight"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardNine"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardTen"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardEleven"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardTwelve"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardThirteen"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardFourteen"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardFifteen"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
-        <Button
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cardSixteen"
             style="@style/backOfCard"
-            tools:ignore= "SpeakableTextPresentCheck"
-            android:background="@drawable/ocean"/>
+            tools:ignore= "SpeakableTextPresentCheck"/>
 
     </GridLayout>
 
