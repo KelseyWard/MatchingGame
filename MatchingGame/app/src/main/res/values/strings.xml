@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Matching Game</string>
+    <string name="app_name">Memory Game</string>
     <string name="new_game">New Game</string>
     <string name="congrats">Congratulations!</string>
     <string name="title_game">Game</string>
