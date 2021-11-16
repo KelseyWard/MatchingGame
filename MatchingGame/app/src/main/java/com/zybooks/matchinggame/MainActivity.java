@@ -20,6 +20,37 @@ public class MainActivity extends AppCompatActivity {
     private boolean turnOver = false;
     private int lastClicked = -1;
 
+    private void SetUp() {
+        button1 = findViewById(R.id.cardOne);
+        button2 = findViewById(R.id.cardTwo);
+        button3 = findViewById(R.id.cardThree);
+        button4 = findViewById(R.id.cardFour);
+        button5 = findViewById(R.id.cardFive);
+        button6 = findViewById(R.id.cardSix);
+        button7 = findViewById(R.id.cardSeven);
+        button8 = findViewById(R.id.cardEight);
+        button9 = findViewById(R.id.cardNine);
+        button10 = findViewById(R.id.cardTen);
+        button11 = findViewById(R.id.cardEleven);
+        button12 = findViewById(R.id.cardTwelve);
+        button13= findViewById(R.id.cardThirteen);
+        button14= findViewById(R.id.cardFourteen);
+        button15= findViewById(R.id.cardFifteen);
+        button16= findViewById(R.id.cardSixteen);
+
+
+        ocean = R.drawable.ocean;
+        microscope = R.drawable.microscope;
+        atom =  R.drawable.atom;
+        danger = R.drawable.danger;
+        rocket = R.drawable.rocket;
+        science = R.drawable.science;
+        astronaut = R.drawable.astronaut;
+        flower = R.drawable.flower;
+        test_tube=R.drawable.test_tube;
+
+    }
+
 
 
     @Override
@@ -87,35 +118,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    private void SetUp() {
-        button1 = findViewById(R.id.cardOne);
-        button2 = findViewById(R.id.cardTwo);
-        button3 = findViewById(R.id.cardThree);
-        button4 = findViewById(R.id.cardFour);
-        button5 = findViewById(R.id.cardFive);
-        button6 = findViewById(R.id.cardSix);
-        button7 = findViewById(R.id.cardSeven);
-        button8 = findViewById(R.id.cardEight);
-        button9 = findViewById(R.id.cardNine);
-        button10 = findViewById(R.id.cardTen);
-        button11 = findViewById(R.id.cardEleven);
-        button12 = findViewById(R.id.cardTwelve);
-        button13= findViewById(R.id.cardThirteen);
-        button14= findViewById(R.id.cardFourteen);
-        button15= findViewById(R.id.cardFifteen);
-        button16= findViewById(R.id.cardSixteen);
 
-
-        ocean = R.drawable.ocean;
-        microscope = R.drawable.microscope;
-        atom =  R.drawable.atom;
-        danger = R.drawable.danger;
-        rocket = R.drawable.rocket;
-        science = R.drawable.science;
-        astronaut = R.drawable.astronaut;
-        flower = R.drawable.flower;
-        test_tube=R.drawable.test_tube;
-
-
-    }
 }
