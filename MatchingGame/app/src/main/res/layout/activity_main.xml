@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:useDefaultMargins="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:columnCount="4"
         android:rowCount="4"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -99,5 +99,27 @@
             tools:ignore= "SpeakableTextPresentCheck"/>
 
     </GridLayout>
+    <Button
+        android:id="@+id/NewGamebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNewGameClick"
+        android:text="New Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_format"
+        app:layout_constraintEnd_toStartOf="@id/MainMenuButton"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/MainMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/NewGamebutton"
+        app:layout_constraintTop_toBottomOf="@+id/card_format"
+        />
     
 </androidx.constraintlayout.widget.ConstraintLayout>
