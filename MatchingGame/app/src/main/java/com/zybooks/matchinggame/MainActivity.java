@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
         test_tube=R.drawable.test_tube;
 
     }
+     //starts new game/activity
+    public void onNewGameClick(View view) {
+        finish();
+        startActivity(getIntent());
+    }
 
 
 
