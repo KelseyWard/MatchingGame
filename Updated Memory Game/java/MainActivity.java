@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
             button5, button6, button7, button8,
             button9, button10, button11, button12,
             button13, button14, button15, button16;
-    private int microscope,atom,danger,rocket,science, astronaut,ocean, flower, test_tube;
+    private int microscope,atom,danger,rocket,science, astronaut,ocean, flower, math;
     private int clicked = 0;
     private boolean turnOver = false;
     private int lastClicked = -1;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         science = R.drawable.science;
         astronaut = R.drawable.astronaut;
         flower = R.drawable.flower;
-        test_tube=R.drawable.test_tube;
+        math=R.drawable.math;
 
     }
     //starts new game/activity
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         //creating lists for images and buttons
         final List<Integer> images = new ArrayList<>
-                (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, test_tube,microscope, atom, danger, rocket, science, astronaut, flower, test_tube));
+                (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, math,microscope, atom, danger, rocket, science, astronaut, flower, math));
 
 
         final List<Button> buttons = new ArrayList<>
