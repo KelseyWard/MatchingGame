@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+// sets all to their appropriate IDs 
     private void SetUp() {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         final List<Button> buttons = new ArrayList<>
-                (Arrays.asList(button1,button2,button3, button4, button5,button6, button7, button8,button9,button10, button11, button12, button13, button14, button15, button16 ));
+                (Arrays.asList(button1,button2,button3, button4, button5, button6, button7, button8,button9,button10, button11, button12, button13, button14, button15, button16 ));
 
-//shuffling images
+        //shuffling images
         Collections.shuffle(images);
 
         //looping through every button
@@ -113,13 +113,16 @@ public class MainActivity extends AppCompatActivity {
                     turnOver = true;
 
                     //getText is current card clicked and then compared with last card clicked
+                    //if not equal to each other 
                     if (buttons.get(finalI).getText() == buttons.get(lastClicked).getText()) {
                         buttons.get(finalI).setEnabled(false);
                         buttons.get(lastClicked).setEnabled(false);
                         turnOver = false;
                         clicked = 0;
                     }
-                }else if (clicked == 0){
+                }
+                //if equal to each other 
+                else if (clicked == 0){
                     turnOver = false;
                 }
             });
