@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16;
-    private int microscope,atom,danger,rocket,science, astronaut,ocean,flower,math;
+    private int microscope,atom,danger,rocket,science, astronaut,space,flower,math;
     private int clicked = 0;
     private boolean turnOver = false;
     private int lastClicked = -1;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button15 = findViewById(R.id.button15);
         button16 = findViewById(R.id.button16);
 
-        ocean = R.drawable.ocean;
+        space = R.drawable.space;
         microscope = R.drawable.microscope;
         atom =  R.drawable.atom;
         danger = R.drawable.danger;
@@ -53,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-   //starts new game/activity 
+   //starts new game/activity
     public void onNewGameClick(View view) {
         finish();
         startActivity(getIntent());
@@ -103,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 //else statement to turn card back over to cardback
                 else if (buttons.get(finalI).getText() != "cardBack" ){
                     //changes back to ocean image
-                    buttons.get(finalI).setBackgroundResource(ocean); //changes back to cardback image
+                    buttons.get(finalI).setBackgroundResource(space); //changes back to cardback image
                     //changes hidden text back to cardBack
                     buttons.get(finalI).setText("cardBack");
                     clicked--;
