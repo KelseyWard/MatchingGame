@@ -16,12 +16,26 @@ public class MainActivity extends AppCompatActivity {
             button5, button6, button7, button8,
             button9, button10, button11, button12,
             button13, button14, button15, button16;
-    private int microscope,atom,danger,rocket,science, astronaut,ocean, flower, math;
+    int[] image = new int[]{R.drawable.microscope, R.drawable.atom, R.drawable.danger,
+            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.ocean, R.drawable.flower, R.drawable.math};
+    private int microscope, atom, danger, rocket, science, astronaut, ocean, flower, math;
     private int clicked = 0;
     private boolean turnOver = false;
+
+    int pairFound = 0;
+
+
+    //creating lists for images and buttons
+    final List<Integer> images = new ArrayList<>
+            (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, math, microscope, atom, danger, rocket, science, astronaut, flower, math));
+
+
+    final List<Button> buttons = new ArrayList<>
+            (Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16));
+
     private int lastClicked = -1;
 
-    private void SetUp() {
+    public void SetUp() {
         button1 = findViewById(R.id.cardOne);
         button2 = findViewById(R.id.cardTwo);
         button3 = findViewById(R.id.cardThree);
@@ -34,23 +48,25 @@ public class MainActivity extends AppCompatActivity {
         button10 = findViewById(R.id.cardTen);
         button11 = findViewById(R.id.cardEleven);
         button12 = findViewById(R.id.cardTwelve);
-        button13= findViewById(R.id.cardThirteen);
-        button14= findViewById(R.id.cardFourteen);
-        button15= findViewById(R.id.cardFifteen);
-        button16= findViewById(R.id.cardSixteen);
+        button13 = findViewById(R.id.cardThirteen);
+        button14 = findViewById(R.id.cardFourteen);
+        button15 = findViewById(R.id.cardFifteen);
+        button16 = findViewById(R.id.cardSixteen);
 
 
         ocean = R.drawable.ocean;
         microscope = R.drawable.microscope;
-        atom =  R.drawable.atom;
+        atom = R.drawable.atom;
         danger = R.drawable.danger;
         rocket = R.drawable.rocket;
         science = R.drawable.science;
         astronaut = R.drawable.astronaut;
         flower = R.drawable.flower;
-        math=R.drawable.math;
+        math = R.drawable.math;
 
     }
+
+
     //starts new game/activity
     public void onNewGameClick(View view) {
         finish();
@@ -58,23 +74,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SetUp();
+        startGame();
+    }
 
+    public void startGame() {
+
+
+        SetUp();
 
         //creating lists for images and buttons
         final List<Integer> images = new ArrayList<>
-                (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, math,microscope, atom, danger, rocket, science, astronaut, flower, math));
+                (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, math, microscope, atom, danger, rocket, science, astronaut, flower, math));
 
 
         final List<Button> buttons = new ArrayList<>
-                (Arrays.asList(button1,button2,button3, button4, button5,button6, button7, button8,button9,button10, button11, button12, button13, button14, button15, button16 ));
+                (Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16));
 
-//shuffling images
+        //shuffling images
         Collections.shuffle(images);
 
         //looping through every button
@@ -84,22 +104,23 @@ public class MainActivity extends AppCompatActivity {
             final int finalI = i;
             buttons.get(i).setOnClickListener(v -> {
 
+
                 //if text = cardback and turnover = false then it turns over
-                if (buttons.get(finalI).getText() == "cardBack" && !turnOver){
+                if (buttons.get(finalI).getText() == "cardBack" && !turnOver) {
                     buttons.get(finalI).setBackgroundResource(images.get(finalI));  //sets background to different image
                     buttons.get(finalI).setText(images.get(finalI));
 
                     //if click = 0 then it is the first card they clicked on
-                    if (clicked == 0){
+                    if (clicked == 0) {
                         lastClicked = finalI;
                     }
                     clicked++;
                 }
 
                 //else statement to turn card back over to cardback
-                else if (buttons.get(finalI).getText() != "cardBack" ){
+                else if (buttons.get(finalI).getText() != "cardBack") {
                     //changes back to ocean image
-                    buttons.get(finalI).setBackgroundResource(ocean); //changes back to cardback image
+                    buttons.get(finalI).setBackgroundResource(space); //changes back to cardback image
                     //changes hidden text back to cardBack
                     buttons.get(finalI).setText("cardBack");
                     clicked--;
@@ -111,18 +132,27 @@ public class MainActivity extends AppCompatActivity {
                     turnOver = true;
 
                     //getText is current card clicked and then compared with last card clicked
+                    //if not equal to each other
                     if (buttons.get(finalI).getText() == buttons.get(lastClicked).getText()) {
                         buttons.get(finalI).setEnabled(false);
                         buttons.get(lastClicked).setEnabled(false);
                         turnOver = false;
                         clicked = 0;
                     }
-                }else if (clicked == 0){
+                }
+                //if equal to each other
+                else if (clicked == 0) {
                     turnOver = false;
+                    pairFound++;
                 }
             });
+
+
+        }
+
+        if (pairFound == 8) {
+            Toast.makeText(this, R.string.congrats, Toast.LENGTH_SHORT).show();
         }
 
     }
-
 }
