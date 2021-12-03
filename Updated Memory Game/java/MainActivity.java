@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
     private Button button1, button2, button3, button4,
             button5, button6, button7, button8,
@@ -18,10 +17,9 @@ public class MainActivity extends AppCompatActivity {
             button13, button14, button15, button16;
     int[] image = new int[]{R.drawable.microscope, R.drawable.atom, R.drawable.danger,
             R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.ocean, R.drawable.flower, R.drawable.math};
-    private int microscope, atom, danger, rocket, science, astronaut, ocean, flower, math;
+    private int microscope, atom, danger, rocket, science, astronaut, space, flower, math;
     private int clicked = 0;
     private boolean turnOver = false;
-
     int pairFound = 0;
 
 
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         button16 = findViewById(R.id.cardSixteen);
 
 
-        ocean = R.drawable.ocean;
+        space = R.drawable.space;
         microscope = R.drawable.microscope;
         atom = R.drawable.atom;
         danger = R.drawable.danger;
@@ -64,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         flower = R.drawable.flower;
         math = R.drawable.math;
 
+
     }
 
 
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
         startActivity(getIntent());
     }
+
 
 
     @Override
@@ -137,22 +137,46 @@ public class MainActivity extends AppCompatActivity {
                         buttons.get(finalI).setEnabled(false);
                         buttons.get(lastClicked).setEnabled(false);
                         turnOver = false;
+                        pairFound++;
                         clicked = 0;
+
+                        if (pairFound == 8) {
+                            Toast.makeText(this, R.string.congrats, Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
                 //if equal to each other
                 else if (clicked == 0) {
                     turnOver = false;
-                    pairFound++;
                 }
             });
 
 
         }
 
-        if (pairFound == 8) {
-            Toast.makeText(this, R.string.congrats, Toast.LENGTH_SHORT).show();
-        }
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
