@@ -3,13 +3,17 @@ package com.zybooks.matchinggame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private Button button1, button2, button3, button4,
             button5, button6, button7, button8,
@@ -21,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private int clicked = 0;
     private boolean turnOver = false;
     int pairFound = 0;
+
+    Button newGame;
+    Button mainMenu;
 
 
     //creating lists for images and buttons
@@ -68,9 +75,16 @@ public class MainActivity extends AppCompatActivity {
 
     //starts new game/activity
     public void onNewGameClick(View view) {
-        finish();
-        startActivity(getIntent());
+        Intent i= new Intent(getApplicationContext(), chooseLevel.class);
+        startActivity(i);
+
     }
+
+    public void startMainMenu(View view){
+        Intent i= new Intent(getApplicationContext(), title_screen.class);
+        startActivity(i);
+    }
+
 
 
 
@@ -78,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        newGame= findViewById(R.id.NewGamebutton);
+        mainMenu= findViewById(R.id.MainMenuButton);
+
         startGame();
     }
 
@@ -157,8 +175,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
-
 
 
 
