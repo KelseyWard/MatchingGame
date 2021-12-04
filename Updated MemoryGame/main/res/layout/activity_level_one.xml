@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".LevelOne">
+
+    <TextView
+        android:id="@+id/inGameText"
+        style="@style/TitleStyle"
+        android:fontFamily="@font/audiowide"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@id/card_format"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <GridLayout
+        android:id="@+id/card_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="50dp"
+        android:columnCount="4"
+        android:rowCount="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/inGameText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cardOne"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cardTwo"
+            tools:ignore= "SpeakableTextPresentCheck"
+            style="@style/backOfCard"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardThree"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardFour"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardFive"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardSix"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardSeven"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/cardEight"
+            style="@style/backOfCard"
+            tools:ignore= "SpeakableTextPresentCheck"/>
+
+
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/NewGamebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNewGameClick"
+        android:text="@string/new_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_format"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/MainMenuButton"
+        />
+
+
+
+    <Button
+        android:id="@+id/MainMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        android:onClick="startMainMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewGamebutton"
+        tools:ignore="OnClick" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
