@@ -29,15 +29,6 @@ public class MainActivity extends AppCompatActivity {
     Button newGame;
     Button mainMenu;
 
-
-    //creating lists for images and buttons
-    final List<Integer> images = new ArrayList<>
-            (Arrays.asList(microscope, atom, danger, rocket, science, astronaut, flower, math, microscope, atom, danger, rocket, science, astronaut, flower, math));
-
-
-    final List<Button> buttons = new ArrayList<>
-            (Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16));
-
     private int lastClicked = -1;
 
     public void SetUp() {
