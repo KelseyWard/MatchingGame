@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             button9, button10, button11, button12,
             button13, button14, button15, button16;
     int[] image = new int[]{R.drawable.microscope, R.drawable.atom, R.drawable.danger,
-            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.ocean, R.drawable.flower, R.drawable.math};
+            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.space, R.drawable.flower, R.drawable.math};
     private int microscope, atom, danger, rocket, science, astronaut, space, flower, math;
     private int clicked = 0;
     private boolean turnOver = false;
