@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //else statement to turn card back over to cardback
                 else if (buttons.get(finalI).getText() != "cardBack") {
-                    //changes back to ocean image
+                    //changes back to astronaut image
                     buttons.get(finalI).setBackgroundResource(space); //changes back to cardback image
                     //changes hidden text back to cardBack
                     buttons.get(finalI).setText("cardBack");
