@@ -19,7 +19,7 @@ public class Level_Two extends AppCompatActivity {
             button5, button6, button7, button8,
             button9, button10, button11, button12;
     int[] image = new int[]{R.drawable.microscope, R.drawable.atom, R.drawable.danger,
-            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.ocean};
+            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.space};
     private int microscope, atom, danger, rocket, science, astronaut, space;
     private int clicked = 0;
     private boolean turnOver = false;
