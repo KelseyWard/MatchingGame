@@ -18,7 +18,7 @@ public class LevelOne extends AppCompatActivity {
     private Button button1, button2, button3, button4,
             button5, button6, button7, button8;
     int[] image = new int[]{R.drawable.microscope, R.drawable.atom, R.drawable.danger,
-            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.ocean};
+            R.drawable.rocket, R.drawable.science, R.drawable.astronaut, R.drawable.space};
     private int microscope, atom, danger, astronaut, space;
     private int clicked = 0;
     private boolean turnOver = false;
