@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     turnOver = true;
 
                     //getText is current card clicked and then compared with last card clicked
-                    //if not equal to each other
+                    //if equal to each other
                     if (buttons.get(finalI).getText() == buttons.get(lastClicked).getText()) {
                         buttons.get(finalI).setEnabled(false);
                         buttons.get(lastClicked).setEnabled(false);
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
-                //if equal to each other
+                //if not equal to each other
                 else if (clicked == 0) {
                     turnOver = false;
 
